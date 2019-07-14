@@ -12,7 +12,7 @@ class UI {
   showPosts(posts) {
     let output = '';
 
-    posts.forEach((post) => {
+    posts.forEach(post => {
       output += `
         <div class="card mb-3">
           <div class="card-body">
@@ -60,7 +60,7 @@ class UI {
   clearAlert() {
     const currentAlert = document.querySelector('.alert');
 
-    if(currentAlert) {
+    if (currentAlert) {
       currentAlert.remove();
     }
   }
@@ -87,7 +87,7 @@ class UI {
 
   // Change the form state
   changeFormState(type) {
-    if(type === 'edit') {
+    if (type === 'edit') {
       this.postSubmit.textContent = 'Update Post';
       this.postSubmit.className = 'post-submit btn btn-warning btn-block';
 
@@ -106,7 +106,7 @@ class UI {
       this.postSubmit.textContent = 'Post It';
       this.postSubmit.className = 'post-submit btn btn-primary btn-block';
       // Remove cancel btn if it is there
-      if(document.querySelector('.post-cancel')) {
+      if (document.querySelector('.post-cancel')) {
         document.querySelector('.post-cancel').remove();
       }
       // Clear ID from hidden field
